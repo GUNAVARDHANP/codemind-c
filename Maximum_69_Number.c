@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,i=0,d,j,arr[100],k=0,brr[100];
+    scanf("%d",&n);
+    while(n>0)
+    {
+        d=n%10;
+        arr[i]=d;
+        i++;
+        n=n/10;
+    }
+    for(j=i-1;j>=0;j--)
+    {
+        brr[k]=arr[j];
+        k++;
+    }
+    for(j=0;j<k;j++)
+    {
+        if(brr[j]==6)
+        {
+            brr[j]=9;
+            break;
+        }
+    }
+    for(j=0;j<k;j++)
+    {
+        printf("%d",brr[j]);
+    }
+}
